@@ -56,13 +56,14 @@
 
         // Constants
         const PLAYER_IMAGE_SRC = "dave-baseball-player.png";
+        const PLAYER_HEIGHT_BUFFER = 50;
         const BALL_IMAGE_SRC = "baseball.png";
         const PLAYER_WIDTH = 150;
         const PLAYER_HEIGHT = 150;
         const BALL_RADIUS = 30;
         const INITIAL_BALL_SPEED = 2;
 
-        let player = { x: canvas.width / 2 - PLAYER_WIDTH / 2, y: canvas.height - PLAYER_HEIGHT * 2, width: PLAYER_WIDTH, height: PLAYER_HEIGHT };
+        let player = { x: canvas.width / 2 - PLAYER_WIDTH / 2, y: canvas.height - PLAYER_HEIGHT + PLAYER_HEIGHT_BUFFER, width: PLAYER_WIDTH, height: PLAYER_HEIGHT };
         let ball = { x: Math.random() * (canvas.width - BALL_RADIUS * 2) + BALL_RADIUS, y: 50, radius: BALL_RADIUS, speed: INITIAL_BALL_SPEED };
         let hitsByPitch = 0, strikes = 0;
         let isDragging = false;
