@@ -178,7 +178,7 @@
         canvas.addEventListener("touchmove", (e) => {
             if (isDragging) {
                 let touchX = e.touches[0].clientX;
-                player.x = touchX - paddle.width / 2;
+                player.x = touchX - player.width / 2;
             }
         });
 
